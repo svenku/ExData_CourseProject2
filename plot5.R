@@ -46,7 +46,7 @@ dataBaltimore <- NEI[NEI$fips == "24510", ]
 
 motorCodes <- grep("motor", SCC$Short.Name, ignore.case = TRUE)
 motorCodes <- SCC[motorCodes, ]
-motorData <- NEI[NEI$SCC %in% motorCodes$SCC, ]
+motorData <- dataBaltimore[dataBaltimore$SCC %in% motorCodes$SCC, ]
 
 # check plotting directory, if necessary create it and create coal emissions plot in it
 
